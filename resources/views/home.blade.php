@@ -9,5 +9,19 @@
 </head>
 <body>
     <h1>Home</h1>
+
+    @auth
+        <p>Bienvenido, {{ Auth::user()->username}}</p>
+    @endauth
+   
+        <form method="POST" action="{{ route('logout') }}">
+            @csrf
+            <button type="submit" class="btn btn-danger">
+                Cerrar sesión 
+            </button>
+        </form>
+    
+   
+    
 </body>
 </html>

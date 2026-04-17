@@ -13,3 +13,8 @@
 h1 {
     font-size: 200px;
 }
+
+.button {
+    color:black;
+    padding:10px 20px;
+}
