@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MacrosController;
 
 
 /*Route::get('/home', function () {
@@ -34,6 +35,14 @@ Route::post('/logout', [LoginController::class, 'logout'])/*->middleware('auth')
 Route::get('/home', [HomeController::class, 'mostrar'])->middleware('auth');
 //Route::get('/register', [RegisterController::class, 'show']);
 //Route::get('register', [RegisterController::class, 'register']);
+
+//Route::view('/macros', 'macros')->name('macros');
+Route::view('/macros','macros')->name('macros');
+
+
+Route::post('/calcularTMB', [MacrosController::class, 'calcularTMB'])->name('guardardatos');
+
+//Route::post('/guardar.sexo', [MacrosController::class, 'calcularTMB'])->name('macros.seleccion');
 
 
 

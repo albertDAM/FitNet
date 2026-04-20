@@ -13,6 +13,10 @@
     @auth
         <p>Bienvenido, {{ Auth::user()->username}}</p>
     @endauth
+
+        <a href="{{ route('macros') }}">
+            Macros
+        </a>
    
         <form method="POST" action="{{ route('logout') }}">
             @csrf
@@ -20,6 +24,8 @@
                 Cerrar sesión 
             </button>
         </form>
+
+
     
    
     
